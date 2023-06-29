@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form | ODIN Project</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <script>
+    function verifyPassword() {
+      if (document.getElementById("password").value == document.getElementById("confirm-password").value) {
+        document.getElementById("password").classList.remove("error");
+        document.getElementById("confirm-password").classList.remove("error");
+        document.getElementById("pass-error-text").innerText = "";
+      } else {
+        document.getElementById("password").classList.add("error");
+        document.getElementById("confirm-password").classList.add("error")
+        document.getElementById("pass-error-text").innerText = "* Passwords do not match";
+      }
+    }
+  </script>
+
+  <body>
+
+    <div class="container">
+      <div class="sidebar bg-image">
+
+        <div class="sidebar-items">
+          
+          <div class="logo-banner">
+            <img class="logo-image" src="odin-lined.png" alt="ODIN Logo">
+            <div class="logo-text">The ODIN Project</div>
+          </div>
+  
+          <div class="bg-image-credit">
+            Photo by <a href="https://unsplash.com/@elladon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ELLA DON</a> on <a href="https://unsplash.com/@elladon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          </div>
+
+        </div>
+  
+      </div>
+
+      <main>
+
+        <div class="bold main-text main-width-container">
+
+          <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+
+          <p>You <em>know</em> you want to.</p>
+
+        </div>
+
+        <form action="">
+
+          <div class="signup-section">
+
+            <div class="main-width-container">
+
+              <p class="">Let's do this!</p>
+              
+              <div class="form-inputs">
+
+                <div>
+                  <label for="fname">First Name</label>
+                  <input type="text" name="fname" id="fname" value="Thor">
+                </div>
+
+                <div>
+                  <label for="lname">Last Name</label>
+                  <input type="text" name="lname" id="lname" value="Odinson">
+                </div>
+
+                <div>
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email">
+                </div>
+
+                <div>
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" name="phone" id="phone">
+                </div>
+
+                <div>
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" onkeyup="verifyPassword();">
+                  <span id="pass-error-text"></span>
+                </div>
+
+                <div>
+                  <label for="confirm-password">Confirm Password</label>
+                  <input type="password" name="confirm-password" id="confirm-password" onkeyup="verifyPassword();">
+                </div>
+
+              </div>
+              
+            </div>
+            
+          </div>          
+
+          <div class="main-width-container">
+            <input type="submit" value="Create Account">
+          </div>
+          
+        </form>
+
+        <p class="main-width-container sub-text">Already have an account? <a href="">Log in</a> </p>
+
+      </main>
+      
+    </div>
+    
+  </body>
+
+</html>
